@@ -7,7 +7,8 @@ jobs:
 #    uses: ./.github/workflows/reusable_test-python.yml
   build-push:
 #    needs: test
-    uses: kbase/.github/.github/workflows/reusable_build-push.yml@main
+    uses: ./.github/workflows/reusable_build-push.yml
+#    uses: kbase/.github/.github/workflows/reusable_build-push.yml@main
     with:
       name: '${{ github.event.repository.name }}-develop'
       tags: '${{ github.ref_name }}'
